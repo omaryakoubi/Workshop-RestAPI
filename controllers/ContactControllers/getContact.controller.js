@@ -9,7 +9,7 @@ module.exports = {
         .json({ status: true, message: "contact list", data: contactList });
     } catch (err) {
       console.log(err);
-      return err;
+      res.status(500).json({ status: false, message: err });
     }
   },
 };

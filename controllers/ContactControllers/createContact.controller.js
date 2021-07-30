@@ -52,8 +52,8 @@ module.exports = {
         data: newContact,
       });
     } catch (err) {
-      res.status(500).json({ status: false, message: err });
       console.log(err);
+      res.status(500).json({ status: false, message: err });
     }
   },
 };
