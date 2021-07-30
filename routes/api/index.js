@@ -1,21 +1,21 @@
 const router = require("express").Router();
-const controllers = require("../../controllers");
+const controllers = require("../../controllers/contactControllers");
 
 router.post(
   "/createContact",
-  controllers.contactControllers.create.createContact
+  controllers.create.createContact
 );
 
-router.get("/contactList", controllers.contactControllers.get.getContactList);
+router.get("/contactList", controllers.get.getContactList);
 
 router.put(
   "/editContact/:id",
-  controllers.contactControllers.update.updateContact
+  controllers.update.updateContact
 );
 
 router.delete(
   "/deleteContact/:id",
-  controllers.contactControllers.delete.deleteContact
+  controllers.delete.deleteContact
 );
 
 module.exports = router;
