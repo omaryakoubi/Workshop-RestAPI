@@ -12,9 +12,9 @@ module.exports = {
         await services.contactServices.delete.deleteContact(id);
         res
           .status(200)
-          .json({ status: true, message: "contact deleted successfully" });
+          .json({ status: true, message: "contact deleted successfully." });
       } else {
-        res.status(404).json({ status: false, message: "contact not found" });
+        res.status(404).json({ status: false, message: "contact not found." });
       }
     } catch (err) {
       console.log(err);

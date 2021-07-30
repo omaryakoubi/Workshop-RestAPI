@@ -14,28 +14,28 @@ module.exports = {
       if (phoneNumber.toString().length !== 8) {
         res.status(406).json({
           status: false,
-          message: "phoneNumber length must be 8 digits",
+          message: "phoneNumber length must be 8 digits.",
         });
       }
 
       if (existingPhoneNumber) {
         res.status(406).json({
           status: false,
-          message: "phoneNumber already exist",
+          message: "phoneNumber already exist.",
         });
       }
 
       if (!email.includes("@")) {
         res.status(406).json({
           status: false,
-          message: "email must includes @",
+          message: "email must includes @.",
         });
       }
 
       if (existingEmail) {
         res.status(406).json({
           status: false,
-          message: "email already exist",
+          message: "email already exist.",
         });
       }
 

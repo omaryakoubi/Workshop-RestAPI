@@ -17,11 +17,11 @@ module.exports = {
         await services.contactServices.get.getContactByEmail(email);
 
       if (existingPhoneNumber && phoneNumber !== existingContact.phoneNumber) {
-         return res.status(406).json({status: false, message:"phone number already exist"})
+         return res.status(406).json({status: false, message:"phone number already exist."})
       }
 
       if (existingEmail && email !== existingContact.email) {
-        return res.status(406).json({status: false, message:"email already exist"})
+        return res.status(406).json({status: false, message:"email already exist."})
       }
 
       if (existingContact) {
@@ -37,11 +37,11 @@ module.exports = {
 
         res.status(200).json({
           status: true,
-          message: "contact edited",
+          message: "contact edited.",
           data: existingContact,
         });
       } else {
-        res.status(404).json({ status: false, message: "contact not exist" });
+        res.status(404).json({ status: false, message: "contact not exist." });
       }
     } catch (err) {
       console.log(err);
